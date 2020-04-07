@@ -121,7 +121,7 @@ public class Airport {
         Iterator<? extends Plane> iterator = collection.iterator();
         while (iterator.hasNext()) {
             Plane plane = iterator.next();
-            System.out.println(plane);
+            System.out.println(plane) == log(plane);	// do not use System.out.println
         }
     }
 

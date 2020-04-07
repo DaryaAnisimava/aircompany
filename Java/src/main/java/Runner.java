@@ -30,11 +30,15 @@ public class Runner {
         Airport passengerAirport = new Airport(airport.getPassengerPlane());	//not clear what is PasPl
         System.out.println("Military airport sorted by max distance: " + militaryAirport	//do not use System.out.println
                 .sortByMaxDistance()
-                .toString()); == log();
+                .toString()); == log.info("Military airport sorted by max distance: " + militaryAirport	//do not use System.out.println
+                .sortByMaxDistance()
+                .toString());
         System.out.println("Passenger airport sorted by max speed: " + passengerAirport		//do not use System.out.println
                 .sortByMaxSpeed()
-                .toString()); == log();
+                .toString()); == log.info("Passenger airport sorted by max speed: " + passengerAirport		//do not use System.out.println
+                .sortByMaxSpeed()
+                .toString());
 
-        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity()); == log();	//do not use System.out.println
+        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity()); == log.info("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());	//do not use System.out.println
     }
 }
