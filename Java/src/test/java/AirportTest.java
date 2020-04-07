@@ -1,4 +1,4 @@
-import planes.experimentalPlane;      //it's better to import classes from one package one by one
+import planes.ExperimentalPlane;      //it's better to import classes from one package one by one
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
@@ -54,18 +54,18 @@ public class AirportTest {
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> sortedPlanes = airport.getPlanes(); //too long name for variable
-		boolean nextPlaneMaxLoadCapacityIsHigherThanCurrent = true; 
+		boolean nextPlaneMaxLoadCapacity = true; //do not put condition in variable's name
         for (int i = 0; i < sortedPlanes.size() - 1; i++) {	//next and current plane variables, it is the reason for cycle
 			if (sortedPlanes.get(i).getMinLoadCapacity() > sortedPlanes.get(i + 1).getMinLoadCapacity()) {															//currentPlane
-                nextPlaneMaxLoadCapacityIsHigherThanCurrent = false;
+                nextPlaneMaxLoadCapacity = false;
                 break;
             }
         }
-        Assert.assertTrue(nextPlaneMaxLoadCapacityIsHigherThanCurrent);		
+        Assert.assertTrue(nextPlaneMaxLoadCapacity);		
     }
 
     @Test
-    public void testIsBomberAmongMilitaryPlanes() {	//bad name for method
+    public void testIsBomberAmongMilitaryPlanes() {	
         Airport airport = new Airport(planes);
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         Assert.assertTrue(!bomberMilitaryPlanes.isEmpty());	//excess code
@@ -73,16 +73,16 @@ public class AirportTest {
     }
 
     @Test
-    public void testIsUnclassifiedPlanesAmongExperimental(){	//description not needed for method's name 
+    public void testIsUnclassifiedPlanesAmongExperimental(){	
         Airport airport = new Airport(planes);
-        List<experimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
-        boolean hasUnclassifiedPlanes = false;
-        for(experimentalPlane experimentalPlane : experimentalPlanes){
+        List<ExperimentalPlane> ExperimentalPlanes = airport.getExperimentalPlanes();
+        boolean unclassifiedPlanes = false;		//verb in variable's name
+        for(ExperimentalPlane experimentalPlane : ExperimentalPlanes){
             if(experimentalPlane.getClassificationLevel() == ClassificationLevel.UNCLASSIFIED){
-                hasUnclassifiedPlanes = true;
+                unclassifiedPlanes = true;
                 break;
             }
         }
-        Assert.assertFalse(hasUnclassifiedPlanes);	
+        Assert.assertFalse(unclassifiedPlanes);	
     }
 }

@@ -1,5 +1,5 @@
 import models.MilitaryType;
-import planes.MilitaryPlane;		//the same style for all packages: plane.MolitatyPlane
+import planes.MilitaryPlane;		//the same style for all packages: plane.MilitaryPlane
 import planes.PassengerPlane;
 import planes.Plane;
 
@@ -30,11 +30,11 @@ public class Runner {
         Airport passengerAirport = new Airport(airport.getPassengerPlane());	//not clear what is PasPl
         System.out.println("Military airport sorted by max distance: " + militaryAirport	//do not use System.out.println
                 .sortByMaxDistance()
-                .toString());
+                .toString()); == log();
         System.out.println("Passenger airport sorted by max speed: " + passengerAirport		//do not use System.out.println
                 .sortByMaxSpeed()
-                .toString());
+                .toString()); == log();
 
-        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());	//do not use System.out.println
+        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity()); == log();	//do not use System.out.println
     }
 }

@@ -1,4 +1,4 @@
-package planes;		//Planes
+package planes;		//packages names should be in the same style
 
 import java.util.Objects;
 

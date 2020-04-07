@@ -1,4 +1,4 @@
-package planes;
+package planes;	//the same style for all packages
 
 import models.MilitaryType;
 
@@ -6,9 +6,9 @@ import java.util.Objects;
 
 public class MilitaryPlane extends Plane{
 
-    private MilitaryType militaryType;	//the same name
+    private MilitaryType militaryType;	//type should be specified
 
-    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
+    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType militaryType) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
         this.militaryType = militaryType;	//type
     }
@@ -25,16 +25,16 @@ public class MilitaryPlane extends Plane{
     }
 
     @Override
-    public boolean equals(Object object) {	//o
+    public boolean equals(Object object) {	//object's name without sense
         if (this == object) return true;		//o
         if (!(object instanceof MilitaryPlane)) return false;
         if (!super.equals(object)) return false;	//o
-        MilitaryPlane plane = (MilitaryPlane) object;		//o; bad name that
-        return militaryType == plane.militaryType;	//militaryType
+        MilitaryPlane plane = (MilitaryPlane) object;		//o
+        return militaryType == plane.militaryType;	//type
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), militaryType);	//militaryType
+        return Objects.hash(super.hashCode(), militaryType);	//type
     }
 }

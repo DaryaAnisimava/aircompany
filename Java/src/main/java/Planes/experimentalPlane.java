@@ -1,14 +1,16 @@
-package planes;	//planes
+package planes;	//the same style for all packages
 
 import models.ClassificationLevel;
 import models.ExperimentalType;
 
-public class experimentalPlane extends Plane{	//classes should be named in one style: ExperimentalPlane
+import java.util.Objects;
 
-    private ExperimentalTypes expeperimentalType;	//type
+public class ExperimentalPlane extends Plane{	//classes should be named in one style
+
+    private ExperimentalTypes experimentalType;	//type should be specified
     private ClassificationLevel classificationLevel;
 
-    public experimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalTypes type, ClassificationLevel classificationLevel) {
+    public experimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalType experimentalTypetype, ClassificationLevel classificationLevel) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
         this.experimentalType = experimentalType;
         this.classificationLevel = classificationLevel;

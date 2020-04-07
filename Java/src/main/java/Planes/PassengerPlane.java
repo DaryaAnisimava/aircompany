@@ -1,4 +1,4 @@
-package planes;		//planes
+package planes;		//the same style for all packages
 
 import java.util.Objects;
 
@@ -29,7 +29,7 @@ public class PassengerPlane extends Plane{
 	//commented code should be deleted
 	
     @Override
-    public boolean equals(Object object) {		//o
+    public boolean equals(Object object) {		//bad object's name
         if (this == object) return true;		//o
         if (!(o instanceof PassengerPlane)) return false;
         if (!super.equals(o)) return false;

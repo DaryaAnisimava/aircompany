@@ -28,7 +28,7 @@ public class Airport {
             if (plane instanceof MilitaryPlane) {
 				militaryPlanes.add((MilitaryPlane) plane);
 			}		
-		}			//no need comment for cycle's end
+		}			//no need comments for cycle's end
         return militaryPlanes;
     }
 	
@@ -97,7 +97,7 @@ public class Airport {
 	
     public Airport sortByMaxSpeed() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane firstPlane, Plane secondPlane) {	//o1, o2
+            public int compare(Plane firstPlane, Plane secondPlane) {	//variable's name without any sense
                 return firstPlane.getMaxSpeed() - secondPlane.getMaxSpeed();	//getMS is not clear name for method
             }
         });
@@ -106,7 +106,7 @@ public class Airport {
 
     public Airport sortByMaxLoadCapacity() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane firstPlane, Plane secondPlane) {	//o1,o2
+            public int compare(Plane firstPlane, Plane secondPlane) {	//variable's name without any sense
                 return firstPlane.getMinLoadCapacity() - secondPlane.getMinLoadCapacity();
             }
         });
